@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+
+body {
+  background: #050a12;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: white;
+  font-size: 20px;
+  animation: fall linear forwards;
+  z-index: 1;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.snowman {
+  position: relative;
+  z-index: 2;
+}
+
+/* Snowman body */
+.bottom {
+  width: 180px;
+  height: 180px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+}
+
+.middle {
+  width: 140px;
+  height: 140px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -70px;
+  left: 20px;
+}
+
+.head {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: 20px;
+}
+
+/* Snowman features */
+.eye {
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.eye.left {
+  top: 30px;
+  left: 30px;
+}
+
+.eye.right {
+  top: 30px;
+  left: 60px;
+}
+
+.carrot {
+  width: 0;
+  height: 0;
+  border-left: 20px solid orange;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  position: absolute;
+  top: 45px;
+  left: 45px;
+}
+
+.buttons {
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  left: 64px;
+}
+
+.buttons:nth-child(1) { top: 30px; }
+.buttons:nth-child(2) { top: 50px; }
+.buttons:nth-child(3) { top: 70px; }
+
+.arm {
+  width: 80px;
+  height: 5px;
+  background: brown;
+  position: absolute;
+  top: 50px;
+}
+
+.arm.left {
+  left: -60px;
+  transform: rotate(45deg);
+}
+
+.arm.right {
+  right: -60px;
+  transform: rotate(-45deg);
+}
+.ctr{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction:column;
+  gap: 40;
+}
+.ctr h2{
+  font-family: "Spicy Rice", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+}
